@@ -1,0 +1,24 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.7.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+bootJar {
+    baseName = 'currency-converter-rest'
+    version =  '0.1.0'
+}
+
+dependencies {
+	compile group: 'org.springframework', name: 'spring-jdbc', version: '3.2.1.RELEASE'
+	compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.7.2'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
